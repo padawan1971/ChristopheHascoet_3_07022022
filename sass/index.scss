@@ -1,4 +1,4 @@
-$font-shrikand:'Shrikhand', cursive ;
+
 *{
     box-sizing: border-box;
 }
@@ -40,9 +40,10 @@ body {
     padding: 1.9rem;
 }
 .btn {
+    border: none;
     background-image: linear-gradient(0deg, rgba(147, 86, 220,.9), rgba(255, 121, 218,.9));
     background-color: #686868;
-    box-shadow: 0 0 .5rem rgba(0,0,0,0.3); 
+    box-shadow: 0 0 .1rem; 
     cursor: pointer;
     font-size: 1.1rem;
     font-weight: 500;
@@ -53,6 +54,7 @@ body {
 }
 .btn:hover {
     box-shadow:  .25rem .25rem .10rem rgba(0,0,0,0.2);  
+    transform: scale(1);
 }
 
 .opé {
@@ -64,14 +66,16 @@ body {
 .opé__fonct {
     counter-reset: bulls;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 .opé__foncts {
+    width: 20rem;
+    height: 4.8rem;
     background-color: #f6f6f6;
     border-radius: 1.3rem;
     box-shadow: 0 0 .5rem rgba(0,0,0,0.3); 
-    padding: 0.75rem 0.75rem;
+    padding: 1rem 1rem;
     font-weight: 700;
     list-style: none;
     position: relative;
@@ -93,7 +97,7 @@ body {
 } 
 .opé__icon{
     color: #7e7e7e;
-    margin: 1rem;
+    padding: 1rem 1.25rem;
 }
 .opé__foncts:hover {
     background-color: #f5e8ff;
@@ -170,14 +174,19 @@ body {
 .footer {
     background-color: #353535;
     padding: 2rem;
+    text-align: center;
 }
-.footer__img{
+.footer__img {
     padding: 0 1rem;
     filter: invert(100%);
     color: #fff;
     height: 1.3rem;
+    margin: 1rem;
 }
 .footer__contact {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
     color: #fff;
     list-style: none;
     padding: 0 1rem;
@@ -185,11 +194,17 @@ body {
 .footer__contact__title {
    padding: 0.2rem;
 }
+.title__icone {
+    margin: 0.4rem;
+}
 .title__icon {
     margin-right: 0.4rem;
     color: #fff;
     text-decoration: none;
 }
+
+// pages de restaurants
+
 .header__logo {
     display: flex;
     align-items: center;
@@ -214,4 +229,78 @@ body {
     max-height: 35rem;
     width: 100%;
     object-fit: cover;
+}
+
+.menu {
+    background-color: #f6f6f6;
+    border-radius: 3rem 3rem 0 0;
+    position: relative;
+    margin-top: -6rem;
+    padding: 4rem;
+    z-index: 1;
+}
+.menu__heart {
+    position: absolute;
+    right: 5rem;
+    top: 5.3rem;
+    font-size: 2rem;
+    background-image: linear-gradient(0deg, rgba(147, 86, 220,.9), rgba(255, 121, 218,.9));
+    background-clip: text;
+   -webkit-background-clip: text;
+   color: transparent; 
+  
+}
+.menu__flex {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 1rem;
+}
+.menu__entree{
+    font-size: 1.2rem;
+    font-weight: 400;
+    position: relative;
+    padding:0.5rem 0.1rem;
+}
+.menu__entree::after {
+    content: "";
+    width: 3rem;
+    height: 0.23rem;
+    background-color: #99E2D0;
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+}
+.btn__menu {
+    width: 22rem;
+    height: 4.3rem;
+    list-style: none;
+    box-shadow: 0 0 .5rem rgba(0,0,0,0.3);
+    padding: 0.75rem 1.25rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    position: relative;
+ } 
+.menu__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 0 0 0.2rem;
+}
+.menu__sous__title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.menu__price {
+position: absolute;
+bottom: 1.5rem;
+left: 19rem;
+} 
+
+.command__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
 }
