@@ -174,13 +174,27 @@ body {
 }
 
 .card__heart {
-  position: absolute;
   right: 1rem;
   font-size: 2rem;
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  position: absolute;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.card__heart--dark {
+  right: 1rem;
+  font-size: 2rem;
+  position: absolute;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.card__heart--dark:hover {
+  border: none;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  transition: all -5s ease-out;
+  cursor: pointer;
 }
 
 .title__title {
@@ -264,14 +278,29 @@ body {
 }
 
 .menu__heart {
-  position: absolute;
   right: 5rem;
-  top: 5.3rem;
+  top: 5rem;
   font-size: 2rem;
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  position: absolute;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.menu__heart--dark {
+  right: 5rem;
+  top: 5rem;
+  font-size: 2rem;
+  position: absolute;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.menu__heart--dark:hover {
+  border: none;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  transition: all -5s ease-out;
+  cursor: pointer;
 }
 
 .menu__flex {
