@@ -21,11 +21,10 @@ body {
 
 .local {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
-  background-color: #f3f3f3;
-  padding: 0.5rem;
+  background-color: #EAEAEA;
   position: relative;
 }
 
@@ -38,15 +37,16 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #fafafa;
-  padding: 1.9rem;
+  background-color: #f6f6f6;
+  padding: 1rem 1rem 4rem;
+  text-align: center;
 }
 
 .btn {
   border: none;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   background-color: #686868;
-  box-shadow: 0 0 0.1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
   cursor: pointer;
   font-size: 1.1rem;
   font-weight: 500;
@@ -57,8 +57,8 @@ body {
 }
 
 .btn:hover {
-  box-shadow: 0.25rem 0.25rem 0.1rem rgba(0, 0, 0, 0.2);
-  transform: scale(1);
+  box-shadow: 0.25rem 0.25rem 0.15rem rgba(0, 0, 0, 0.3);
+  opacity: 0.9;
 }
 
 .opé {
@@ -73,6 +73,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  padding: 1rem 1rem 2rem;
 }
 
 .opé__foncts {
@@ -109,7 +110,7 @@ body {
 }
 
 .opé__foncts:hover {
-  background-color: #f5e8ff;
+  background-color: #F5EDFF;
   cursor: pointer;
 }
 
@@ -119,7 +120,7 @@ body {
 }
 
 .restaurant {
-  background-color: #fafafa;
+  background-color: #f6f6f6;
   padding: 3rem;
 }
 
@@ -147,6 +148,7 @@ body {
   width: 50vh;
   height: 16.8rem;
   position: relative;
+  animation: btn__menu 2s;
 }
 
 .card__img {
@@ -158,7 +160,8 @@ body {
 
 .card__new {
   background-color: #99E2D0;
-  color: #008766;
+  color: #1C987A;
+  font-weight: bold;
   padding: 0.5rem;
   border-radius: 0.12rem;
   position: absolute;
@@ -195,6 +198,7 @@ body {
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   transition: all -5s ease-out;
   cursor: pointer;
+  opacity: 0.96;
 }
 
 .title__title {
@@ -329,7 +333,7 @@ body {
 }
 
 .btn__menu {
-  width: 22rem;
+  width: 21rem;
   height: 4.3rem;
   list-style: none;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
@@ -337,15 +341,28 @@ body {
   border-radius: 1rem;
   background-color: #fff;
   position: relative;
+  animation: btn__menu 2s;
 }
 
+@keyframes btn__menu {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .menu__title {
   font-size: 1.1rem;
   font-weight: 700;
   padding: 0 0 0.2rem;
 }
 
-.menu__sous__title {
+.menu__sub {
+  display: block;
+  width: 60%;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -353,8 +370,8 @@ body {
 
 .menu__price {
   position: absolute;
-  bottom: 1.5rem;
-  left: 19rem;
+  bottom: 1rem;
+  left: 18rem;
 }
 
 .command__btn {
