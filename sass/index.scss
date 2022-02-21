@@ -258,10 +258,12 @@ body {
 }
 .menu__titre {
     font-family: "Shrikhand", sans-serif;
+    font-weight: 200;
+    font-size: 1.9rem;
 }
 .menu__heart {
     right: 5rem;
-    top: 2rem;
+    top: 2.5rem;
     font-size: 2rem;
     position: absolute;
     background-clip: text;
@@ -269,7 +271,7 @@ body {
 }
 .menu__heart--dark {
     right: 5rem;
-    top: 2rem;
+    top: 2.5rem;
     font-size: 2rem;
     position: absolute;
     background-clip: text;
