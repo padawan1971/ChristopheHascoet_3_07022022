@@ -11,15 +11,15 @@
     }
 
     &__contact {
-        display: flex; 
-        flex-direction: column;   
-        color: $white;
-        list-style: none;
-        padding: 0 0.4rem;
-        margin: -0.5rem 0 2rem;
+            display: flex; 
+            flex-direction: column;   
+            color: $white;
+            list-style: none;
+            padding: 0 0.4rem;
+            margin: -0.5rem 0 2rem;
 
         &__title {
-            margin: 0.20rem;
+                margin: 0.20rem;
 
         }
     }

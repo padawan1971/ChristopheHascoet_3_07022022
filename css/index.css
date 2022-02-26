@@ -27,14 +27,14 @@ body {
   z-index: 1;
 }
 .header__logo--arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   left: 2rem;
   top: 1.5rem;
   font-size: 1.2rem;
   color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .local {
