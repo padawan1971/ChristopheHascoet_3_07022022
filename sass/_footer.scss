@@ -1,0 +1,36 @@
+.footer {
+    background-color: $black;
+    padding: 0.8rem;
+
+    &__img {
+        padding: 0 1rem;
+       filter: invert(100%);
+       color: $white;
+       height: 1.1rem; 
+       margin: 1rem 0.2rem;
+    }
+
+    &__contact {
+        display: flex; 
+        flex-direction: column;   
+        color: $white;
+        list-style: none;
+        padding: 0 0.4rem;
+        margin: -0.5rem 0 2rem;
+
+        &__title {
+            margin: 0.20rem;
+
+        }
+    }
+
+    &__title__icone {
+        margin: 0.4rem;
+    }
+    
+    &__title__icon {
+        margin-right: 0.4rem;
+        color: $white;
+        text-decoration: none;
+    }
+}

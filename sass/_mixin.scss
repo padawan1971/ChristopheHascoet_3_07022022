@@ -1,0 +1,85 @@
+@mixin flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin end {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+@mixin wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@mixin column {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+@mixin evenly {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+}
+@mixin rel {
+    position: relative;
+}
+
+@mixin abs {
+    position: absolute;
+}
+
+@mixin text {
+    text-align: center;
+}
+@mixin com {
+    border: none;
+    background-image: linear-gradient(0deg, $color-primary, $color-secondary);
+    background-color: $grey;
+    box-shadow: .25rem .25rem 10px rgba(0,0,0,.25);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.95rem 2.8rem;
+    border-radius: 6.25rem;
+    text-decoration: none;
+    color: $white;
+    text-align: center;
+    margin: 2.6rem 0 1.6rem;
+    transition: .20s;
+}
+@mixin btn {
+    border: none;
+    background-image: linear-gradient(0deg, $color-primary, $color-secondary);
+    background-color: $grey;
+    box-shadow: $shadow;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 1rem 1.3rem;
+    border-radius: 6.25rem;
+    text-decoration: none;
+    color:$white;
+    @include text;
+    transition: .20s;
+}
+@mixin meal {
+    @keyframes meal {
+        from {
+            transform: translateY(50%);
+           opacity: 0;
+        }
+         to {
+             transform: translateY(0);
+            opacity: 1;
+        }
+     } 
+}
+
+@mixin btn-hov {
+    box-shadow:  $shadow1; 
+    opacity: 0.90;
+}

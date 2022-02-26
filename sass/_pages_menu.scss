@@ -1,0 +1,142 @@
+.franc__img {
+    max-width: 100%;
+    max-height: 35rem;
+    width: 100%;
+    object-fit: cover;
+    animation: meal 2s;
+}
+
+.menu {
+    background-color: $grey-semi-light;
+    border-radius: 3rem 3rem 0 0;
+    @include rel;
+    margin-top: -3.6rem;
+    padding: 0.5rem 1rem;
+    z-index: 1; 
+
+    &__head {
+        font-family: "Shrikhand", sans-serif;
+        font-weight: 200;
+        font-size: 1.75rem;
+    }
+
+    &__like {
+        @include end;
+    }
+
+    &__heart {
+        top: 2.5rem;
+        right: 2.5rem;
+        font-size: 1.55rem;
+        @include abs;
+        color: $black;
+
+        &--dark {
+            top: 2.5rem;
+           right: 2.5rem;
+            font-size: 1.55rem;
+            @include abs;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+
+            &:hover {
+                border: 0;
+                background-image: linear-gradient(0deg, $color-primary, $color-secondary);
+                cursor: pointer;
+                transition-duration: 1s ease-in-out;
+            }
+        }
+    }
+
+    &__flex {
+        @include evenly;
+        gap: 1rem;
+        padding: 1rem;
+        margin: -2rem 0;
+    }
+
+    &__meal {
+        font-size: 1rem;
+        font-weight: 200;
+        @include rel;
+        padding:0.5rem 0.1rem;
+
+        &::after{
+            content: "";
+            width: 2.7rem;
+            height: 0.18rem;
+            background-color: $color-tertiary;
+            @include abs;
+            bottom: 0;
+            left: 0; 
+        }
+    }
+
+    &__anim {
+        animation: meal 2s;
+        @include meal;
+    }
+
+    &__btn {
+        width: 21.3rem;
+        height: 4.2rem;
+        box-shadow: .25rem .25rem 1rem rgba(0,0,0,.1);
+        border-radius: 1rem;
+        background-color: $white;
+        margin: -0.30rem;
+        animation: meal 1s;
+    }
+
+    &__btn {
+        width: 21.3rem;
+        height: 4.2rem;
+        box-shadow: .25rem .25rem 1rem rgba(0,0,0,.1);
+        border-radius: 1rem;
+        background-color: $white;
+        margin: -0.30rem;
+        animation: meal 1s;
+
+        &--meal {
+            width: 21.3rem;
+            height: 5.5rem;
+            box-shadow: .25rem .25rem 1rem rgba(0,0,0,.1);
+            border-radius: 1rem;
+            background-color: $white;
+            margin: -0.30rem;
+            animation: meal 2s;
+        }
+    }
+
+    &__title {
+        padding: 0.75rem 1rem;
+        font-size: 1.1rem;
+    }
+}
+.title__sub {
+    margin: -1.7rem 1rem;
+    font-size: 0.9rem;
+    display: block;
+    width: 75%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.sub__price {
+        font-weight: 700;
+        @include rel;
+        bottom: 0.3rem;
+        left: 18rem;
+}
+
+.command__btn {
+    @include flex;
+    padding: 2rem;
+}
+.btn__com {
+    @include com;
+
+    &:hover {
+        @include btn-hov;
+    }
+}
