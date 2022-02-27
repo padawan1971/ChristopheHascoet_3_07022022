@@ -83,3 +83,27 @@
     box-shadow:  $shadow1; 
     opacity: 0.90;
 }
+
+@mixin load {
+    @keyframes load {
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(0);
+        }
+    } 
+}
+
+@mixin anim {
+    @keyframes animate
+{
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    
+    }
+} 
+}
