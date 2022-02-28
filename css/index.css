@@ -300,6 +300,7 @@ body {
   margin-top: -3.6rem;
   padding: 0.5rem 1rem;
   z-index: 1;
+  overflow: hidden;
 }
 .menu__head {
   font-family: "Shrikhand", sans-serif;
@@ -378,15 +379,6 @@ body {
     transform: translateY(0);
     opacity: 1;
   }
-}
-.menu__btn {
-  width: 21.3rem;
-  height: 4.2rem;
-  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
-  border-radius: 1rem;
-  background-color: #fff;
-  margin: -0.3rem;
-  animation: meal 1s;
 }
 .menu__btn {
   width: 21.3rem;
