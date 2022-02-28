@@ -223,7 +223,17 @@ body {
   height: 16.8rem;
   position: relative;
   margin: 0.6rem;
-  animation: meal 1s;
+  animation: card 2s ease-in-out 3s;
+}
+@keyframes card {
+  0% {
+    transform: scale(0);
+    transform-origin: 50% 100%;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: 50% 100%;
+  }
 }
 .card__img {
   width: 50vh;
@@ -265,7 +275,7 @@ body {
 .card__heart--dark:hover {
   border: none;
   background-image: linear-gradient(0deg, #9356DC, #FF79DA);
-  transition: widht 0.2s ease;
+  animation: heart 2s ease-in-out 30ms;
   cursor: pointer;
   opacity: 0.96;
 }
@@ -280,7 +290,7 @@ body {
   max-height: 35rem;
   width: 100%;
   object-fit: cover;
-  animation: meal 2s;
+  animation: card 2s ease-in-out;
 }
 
 .menu {
@@ -321,7 +331,17 @@ body {
   border: 0;
   background-image: linear-gradient(0deg, #9356DC, #FF79DA);
   cursor: pointer;
-  transition-duration: 1s ease-in-out;
+  animation: heart 2s ease-in-out 30ms;
+}
+@keyframes heart {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 .menu__flex {
   display: flex;

@@ -3,7 +3,7 @@
     max-height: 35rem;
     width: 100%;
     object-fit: cover;
-    animation: meal 2s;
+    animation: card 2s ease-in-out;
 }
 
 .menu {
@@ -44,7 +44,8 @@
                 border: 0;
                 background-image: linear-gradient(0deg, $color-primary, $color-secondary);
                 cursor: pointer;
-                transition-duration: 1s ease-in-out;
+                animation: heart 2s ease-in-out 30ms;
+                @include heart;
             }
         }
     }
@@ -107,7 +108,6 @@
             animation: meal 2s;
         }
     }
-
     &__title {
         padding: 0.75rem 1rem;
         font-size: 1.1rem;
