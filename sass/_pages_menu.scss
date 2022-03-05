@@ -53,16 +53,14 @@
 
     &__flex {
         @include evenly;
-        gap: 1rem;
-        padding: 1rem;
-        margin: -2rem 0;
+        
     }
 
     &__meal {
         font-size: 1rem;
         font-weight: 200;
         @include rel;
-        padding:0.5rem 0.1rem;
+        margin: 1.2rem;
 
         &::after{
             content: "";
@@ -71,7 +69,28 @@
             background-color: $color-tertiary;
             @include abs;
             bottom: 0;
-            left: 0; 
+            left: 0;
+            top: 1.5rem; 
+        }
+    }
+
+    &__item {
+        box-shadow: .25rem .25rem 1rem rgba(0,0,0,.1);
+        border-radius: 1rem;
+        background-color: $white;
+        padding: 0.75rem 1rem;
+        margin: 1rem;
+        width: 21.6rem;
+        height: 4.3rem;
+
+        &--un {
+            box-shadow: .25rem .25rem 1rem rgba(0,0,0,.1);
+            border-radius: 1rem;
+            background-color: $white;
+            padding: 0.75rem 1rem;
+            margin: 1rem;
+            width: 21.6rem;
+            height: 5.9rem;
         }
     }
 
@@ -80,45 +99,96 @@
         @include meal;
     }
 
-    &__btn {
-        width: 21.3rem;
-        height: 4.2rem;
-        box-shadow: .25rem .25rem 1rem rgba(0,0,0,.1);
-        border-radius: 1rem;
-        background-color: $white;
-        margin: -0.30rem;
-        animation: meal 1s;
-
-        &--meal {
-            width: 21.3rem;
-            height: 5.5rem;
-            box-shadow: .25rem .25rem 1rem rgba(0,0,0,.1);
-            border-radius: 1rem;
-            background-color: $white;
-            margin: -0.30rem;
-            animation: meal 2s;
-        }
-    }
-    &__title {
-        padding: 0.75rem 1rem;
+}
+.item__dinner {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5rem;
+    
+    &__tit {
         font-size: 1.1rem;
+        padding: 0;
+        margin: 0;
     }
-}
-.title__sub {
-    margin: -1.7rem 1rem;
-    font-size: 0.9rem;
-    display: block;
-    width: 75%;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-}
-.sub__price {
+    &__sub {
+        font-size: 0.9rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__price {
+        display: flex;
+        justify-content: flex-end;
         font-weight: 700;
         @include rel;
-        bottom: 0.3rem;
-        left: 18rem;
+        bottom: 2.3rem;
+        right: 0.6rem;
+    }
+    
+    &__check {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 1.4rem;
+        @include rel;
+        bottom: 7rem;
+        left: 4rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        &--un {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 1.4rem;
+            @include rel;
+            bottom: 8.5rem;
+            left: 4rem;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
 }
+.check {
+    @include flex;
+    background-color: $color-tertiary;
+    height: 4.5rem;
+    width: 4rem;
+    color: $white;
+    border-radius: 0 1rem 1rem 0;
+    @include rel;
+
+    &--un {
+        @include flex;
+        background-color: $color-tertiary;
+        height: 6rem;
+        width: 4rem;
+        color: $white;
+        border-radius: 0 1rem 1rem 0;
+        @include rel;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .command__btn {
     @include flex;

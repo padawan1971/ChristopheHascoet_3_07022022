@@ -8,7 +8,7 @@
     opacity: 0.89;
     animation: load 2s forwards;
     animation-delay: 3s;
-    transform-origin: top;
+    transform-origin: bottom;
     @include load;
 
     &__spinner {
