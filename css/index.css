@@ -2,12 +2,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #161414;
+  background-color: #fff;
   height: 100vh;
   position: fixed;
   inset: 0;
-  z-index: 1;
-  opacity: 0.89;
+  z-index: 9;
+  opacity: 10;
   animation: load 2s forwards;
   animation-delay: 3s;
   transform-origin: bottom;
@@ -34,7 +34,7 @@
   left: 25px;
   right: 25px;
   bottom: 25px;
-  z-index: 10;
+  z-index: 1;
   border-radius: 50%;
 }
 .loader__span {
@@ -353,7 +353,7 @@ body {
   font-size: 1rem;
   font-weight: 200;
   position: relative;
-  margin: 1.2rem;
+  margin: 1.4rem;
 }
 .menu__meal::after {
   content: "";
@@ -366,81 +366,58 @@ body {
   top: 1.5rem;
 }
 .menu__item {
+  display: flex;
+  justify-content: space-between;
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
   background-color: #fff;
-  padding: 0.75rem 1rem;
   margin: 1rem;
-  width: 21.6rem;
-  height: 4.3rem;
+  width: 21.5rem;
+  height: 4.4rem;
 }
-.menu__item--un {
-  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
-  border-radius: 1rem;
-  background-color: #fff;
-  padding: 0.75rem 1rem;
-  margin: 1rem;
-  width: 21.6rem;
-  height: 5.9rem;
+.menu__item:hover .check {
+  max-width: 150px;
 }
-.menu__anim {
-  animation: meal 2s;
-}
-@keyframes meal {
-  from {
-    transform: translateY(50%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.menu__item:hover .check-circle {
+  transform: rotate(1turn);
+  transition: transform 400ms ease-in-out;
 }
 
 .item__dinner {
   display: flex;
   flex-direction: column;
-  line-height: 1.5rem;
+  justify-content: space-between;
+  padding: 0.75rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .item__dinner__tit {
   font-size: 1.1rem;
   padding: 0;
   margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .item__dinner__sub {
   font-size: 0.9rem;
   padding: 0;
   margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
 }
 .item__dinner__price {
-  display: flex;
-  justify-content: flex-end;
   font-weight: 700;
-  position: relative;
-  bottom: 2.3rem;
-  right: 0.6rem;
-}
-.item__dinner__check {
   display: flex;
+  align-items: flex-end;
   justify-content: flex-end;
-  font-size: 1.4rem;
-  position: relative;
-  bottom: 7rem;
-  left: 4rem;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  height: 100%;
 }
-.item__dinner__check--un {
-  display: flex;
-  justify-content: flex-end;
-  font-size: 1.4rem;
-  position: relative;
-  bottom: 8.5rem;
-  left: 4rem;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+.item__dinner__price--price {
+  padding: 0 1rem;
 }
 
 .check {
@@ -448,22 +425,67 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #99E2D0;
-  height: 4.5rem;
-  width: 4rem;
-  color: #fff;
   border-radius: 0 1rem 1rem 0;
-  position: relative;
+  height: 100%;
+  width: 4rem;
+  font-size: 1.25rem;
+  color: #fff;
+  overflow: hidden;
+  max-width: 0px;
+  transition: max-width 400ms ease-in-out;
 }
-.check--un {
+
+.menu__item__encas {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  background-color: #fff;
+  margin: 1rem;
+  width: 21.5rem;
+  height: 5.8rem;
+}
+.menu__item__encas:hover .check__encas {
+  max-width: 150px;
+}
+.menu__item__encas:hover .check__encas__circle {
+  transform: rotate(1turn);
+  transition: transform 400ms ease-in-out;
+}
+
+.item__dinner__encas {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.item__dinner__tit__encas {
+  font-size: 1.1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.item__dinner__sub__encas {
+  font-size: 0.9rem;
+  padding: 0;
+  margin: 0.4rem 0;
+}
+
+.check__encas {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #99E2D0;
-  height: 6rem;
-  width: 4rem;
-  color: #fff;
   border-radius: 0 1rem 1rem 0;
-  position: relative;
+  height: 100%;
+  width: 4.1rem;
+  color: #fff;
+  overflow: hidden;
+  max-width: 0px;
+  transition: max-width 400ms ease-in-out;
 }
 
 .command__btn {

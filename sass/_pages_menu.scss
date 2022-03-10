@@ -60,7 +60,7 @@
         font-size: 1rem;
         font-weight: 200;
         @include rel;
-        margin: 1.2rem;
+        margin: 1.4rem;
 
         &::after{
             content: "";
@@ -75,118 +75,139 @@
     }
 
     &__item {
-        box-shadow: .25rem .25rem 1rem rgba(0,0,0,.1);
-        border-radius: 1rem;
-        background-color: $white;
-        padding: 0.75rem 1rem;
-        margin: 1rem;
-        width: 21.6rem;
-        height: 4.3rem;
+       display: flex;
+       justify-content: space-between;
+       box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+       border-radius: 1rem;
+       background-color: $white;
+       margin: 1rem;
+       width: 21.5rem;
+       height: 4.4rem;
+     
 
-        &--un {
-            box-shadow: .25rem .25rem 1rem rgba(0,0,0,.1);
-            border-radius: 1rem;
-            background-color: $white;
-            padding: 0.75rem 1rem;
-            margin: 1rem;
-            width: 21.6rem;
-            height: 5.9rem;
-        }
+       &:hover .check {
+           max-width: 150px;
+
+           &-circle {                          
+               transform: rotate(1turn);
+               transition: transform 400ms ease-in-out;
+           }
+       }
+       
     }
 
-    &__anim {
-        animation: meal 2s;
-        @include meal;
-    }
+    // &__anim {
+    //     animation: meal 2s;
+    //     @include meal;
+    // }
 
 }
 .item__dinner {
     display: flex;
     flex-direction: column;
-    line-height: 1.5rem;
-    
+    justify-content: space-between;
+    padding: 0.75rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
     &__tit {
         font-size: 1.1rem;
         padding: 0;
-        margin: 0;
-    }
-    &__sub {
-        font-size: 0.9rem;
-        padding: 0;
-        margin: 0;
-    }
-
-    &__price {
-        display: flex;
-        justify-content: flex-end;
-        font-weight: 700;
-        @include rel;
-        bottom: 2.3rem;
-        right: 0.6rem;
-    }
-    
-    &__check {
-        display: flex;
-        justify-content: flex-end;
-        font-size: 1.4rem;
-        @include rel;
-        bottom: 7rem;
-        left: 4rem;
+        margin: 0; 
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+    }
 
-        &--un {
-            display: flex;
-            justify-content: flex-end;
-            font-size: 1.4rem;
-            @include rel;
-            bottom: 8.5rem;
-            left: 4rem;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
+    &__sub {
+        font-size: 0.9rem;
+        padding:0;
+        margin: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    &__price {
+        font-weight: 700;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        height: 100%;
+
+        &--price {
+            padding: 0 1rem;
+            
         }
+        
     }
 }
 .check {
-    @include flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: $color-tertiary;
-    height: 4.5rem;
-    width: 4rem;
-    color: $white;
     border-radius: 0 1rem 1rem 0;
-    @include rel;
-
-    &--un {
-        @include flex;
-        background-color: $color-tertiary;
-        height: 6rem;
-        width: 4rem;
-        color: $white;
-        border-radius: 0 1rem 1rem 0;
-        @include rel;
-    }
+    height: 100%;
+    width: 4rem;
+    font-size: 1.25rem;
+    color: $white;
+    overflow: hidden;
+    max-width: 0px;
+    transition: max-width 400ms ease-in-out;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.menu__item__encas {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    background-color: $white;
+    margin: 1rem;
+    width: 21.5rem;
+    height: 5.8rem;
+  
+    &:hover .check__encas {
+      max-width: 150px;
+  
+      &__circle {                          
+          transform: rotate(1turn);
+          transition: transform 400ms ease-in-out;
+      }
+  }
+  }
+  .item__dinner__encas {
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .item__dinner__tit__encas {
+    font-size: 1.1rem;
+    padding: 0;
+    margin: 0;
+  } 
+  .item__dinner__sub__encas {
+    font-size: 0.9rem;
+    padding: 0;
+    margin: 0.4rem 0;
+  }
+  .check__encas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-tertiary;
+    border-radius: 0 1rem 1rem 0;
+    height: 100%;
+    width: 4.1rem;
+    color: $white;
+    overflow: hidden;
+    max-width: 0px;
+    transition: max-width 400ms ease-in-out;
+  }
 
 
 
