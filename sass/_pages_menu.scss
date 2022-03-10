@@ -96,10 +96,10 @@
        
     }
 
-    // &__anim {
-    //     animation: meal 2s;
-    //     @include meal;
-    // }
+    &__anim {
+        animation: meal 2s;
+        @include meal;
+    }
 
 }
 .item__dinner {

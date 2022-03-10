@@ -382,6 +382,19 @@ body {
   transform: rotate(1turn);
   transition: transform 400ms ease-in-out;
 }
+.menu__anim {
+  animation: meal 2s;
+}
+@keyframes meal {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 .item__dinner {
   display: flex;
