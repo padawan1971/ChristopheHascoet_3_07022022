@@ -98,6 +98,9 @@
 
     &__card {
         @include wrap;
+        @include media-min ( 992px) {
+            @include flex;
+        }
     }
 }
 
@@ -116,10 +119,12 @@
     margin: 0.6rem;
     animation: card 2s ease-in-out 3s;
     @include card;
-    @include media-min ( 768px) {
+    @include media-min ( 1200px) {
         width: 25rem;
     }
-
+    @include media-min ( 962px) {
+        width: 30rem;
+    }
     &__img {
         width: 100%;
         height: 12rem;
