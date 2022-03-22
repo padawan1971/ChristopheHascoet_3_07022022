@@ -1,144 +1,143 @@
 @mixin flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @mixin end {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 @mixin wrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 @mixin column {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 @mixin evenly {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: space-evenly;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
 }
 @mixin rel {
-    position: relative;
+  position: relative;
 }
 
 @mixin abs {
-    position: absolute;
+  position: absolute;
 }
 
 @mixin text {
-    text-align: center;
+  text-align: center;
 }
 @mixin com {
-    border: none;
-    background-image: linear-gradient(0deg, $color-primary, $color-secondary);
-    background-color: $grey;
-    box-shadow: .25rem .25rem 10px rgba(0,0,0,.25);
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 0.95rem 2.8rem;
-    border-radius: 6.25rem;
-    text-decoration: none;
-    color: $white;
-    text-align: center;
-    margin: 2.6rem 0 1.6rem;
-    transition: .20s;
+  border: none;
+  background-image: linear-gradient(0deg, $color-primary, $color-secondary);
+  background-color: $grey;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.95rem 2.8rem;
+  border-radius: 6.25rem;
+  text-decoration: none;
+  color: $white;
+  text-align: center;
+  margin: 2.6rem 0 1.6rem;
+  transition: 0.2s;
 }
 @mixin btn {
-    border: none;
-    background-image: linear-gradient(0deg, $color-primary, $color-secondary);
-    background-color: $grey;
-    box-shadow: $shadow;
-    cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: 600;
-    padding: 1rem 1.3rem;
-    border-radius: 6.25rem;
-    text-decoration: none;
-    color:$white;
-    @include text;
-    transition: .20s;
+  border: none;
+  background-image: linear-gradient(0deg, $color-primary, $color-secondary);
+  background-color: $grey;
+  box-shadow: $shadow;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 1rem 1.3rem;
+  border-radius: 6.25rem;
+  text-decoration: none;
+  color: $white;
+  @include text;
+  transition: 0.2s;
 }
 
-
 @mixin btn-hov {
-    box-shadow:  $shadow1; 
-    opacity: 0.90;
+  box-shadow: $shadow1;
+  opacity: 0.9;
 }
 
 @mixin meal {
-    @keyframes meal {
-        from {
-            transform: translateY(50%);
-           opacity: 0;
-        }
-         to {
-             transform: translateY(0);
-            opacity: 1;
-        }
-     } 
+  @keyframes meal {
+    from {
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 }
 
 @mixin media-min($_min-width) {
-    @media screen and (min-width: $_min-width) {
-        &{ @content; }
+  @media screen and (min-width: $_min-width) {
+    & {
+      @content;
     }
+  }
 }
 @mixin load {
-    @keyframes load {
-        from {
-            transform: scale(1);
-        }
-        to {
-            transform: scale(0);
-        }
-    } 
+  @keyframes load {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(0);
+    }
+  }
 }
 
 @mixin anim {
-    @keyframes animate
-{
+  @keyframes animate {
     0% {
-        transform: rotate(0deg)
+      transform: rotate(0deg);
     }
     100% {
-        transform: rotate(360deg)
-    
+      transform: rotate(360deg);
     }
-} 
+  }
 }
 
 @mixin card {
-    @keyframes card {
-        0% {
-          transform: scale(0);
-          transform-origin: 50% 100%;
-        }
-      
-        100% {
-          transform: scale(1);
-          transform-origin: 50% 100%;
-        }
-      }
+  @keyframes card {
+    0% {
+      transform: scale(0);
+      transform-origin: 50% 100%;
+    }
+
+    100% {
+      transform: scale(1);
+      transform-origin: 50% 100%;
+    }
+  }
 }
 
 @mixin heart {
-    @keyframes heart {
-        0% {
-          opacity: 0;
-          transform: scale(0.6);
-        }
-      
-        100% {
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
+  @keyframes heart {
+    0% {
+      opacity: 0;
+      transform: scale(0.6);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 }

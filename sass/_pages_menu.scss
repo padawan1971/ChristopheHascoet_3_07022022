@@ -1,165 +1,87 @@
 .franc__img {
-    max-width: 100%;
-    max-height: 35rem;
-    width: 100%;
-    height: 20rem;
-    object-fit: cover;
-    animation: card 2s ease-in-out;
+  max-width: 100%;
+  max-height: 35rem;
+  width: 100%;
+  height: 17rem;
+  object-fit: cover;
+  animation: card 2s ease-in-out;
+  @include media-min(992px) {
+    height: 25rem;
+  }
 }
 
 .menu {
-    background-color: $grey-semi-light;
-    border-radius: 3rem 3rem 0 0;
+  background-color: $grey-semi-light;
+  border-radius: 3rem 3rem 0 0;
+  @include rel;
+  margin-top: -3.6rem;
+  padding: 0.5rem 1rem;
+  z-index: 1;
+  overflow: hidden;
+
+  &__head {
+    font-family: "Shrikhand", sans-serif;
+    font-weight: 200;
+    font-size: 1.75rem;
+  }
+
+  &__like {
+    @include end;
+  }
+
+  &__heart {
+    top: 2.5rem;
+    right: 2.5rem;
+    font-size: 1.55rem;
+    @include abs;
+    color: $black;
+
+    &--dark {
+      top: 2.5rem;
+      right: 2.5rem;
+      font-size: 1.55rem;
+      @include abs;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+
+      &:hover {
+        border: 0;
+        background-image: linear-gradient(
+          0deg,
+          $color-primary,
+          $color-secondary
+        );
+        cursor: pointer;
+        animation: heart 2s ease-in-out 30ms;
+        @include heart;
+      }
+    }
+  }
+
+  &__flex {
+    @include evenly;
+  }
+
+  &__meal {
+    font-size: 1rem;
+    font-weight: 200;
     @include rel;
-    margin-top: -3.6rem;
-    padding: 0.5rem 1rem;
-    z-index: 1; 
-    overflow: hidden;
+    margin: 1.4rem;
 
-    &__head {
-        font-family: "Shrikhand", sans-serif;
-        font-weight: 200;
-        font-size: 1.75rem;
+    &::after {
+      content: "";
+      width: 2.7rem;
+      height: 0.18rem;
+      background-color: $color-tertiary;
+      @include abs;
+      bottom: 0;
+      left: 0;
+      top: 1.5rem;
     }
+  }
 
-    &__like {
-        @include end;
-    }
-
-    &__heart {
-        top: 2.5rem;
-        right: 2.5rem;
-        font-size: 1.55rem;
-        @include abs;
-        color: $black;
-
-        &--dark {
-            top: 2.5rem;
-           right: 2.5rem;
-            font-size: 1.55rem;
-            @include abs;
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-
-            &:hover {
-                border: 0;
-                background-image: linear-gradient(0deg, $color-primary, $color-secondary);
-                cursor: pointer;
-                animation: heart 2s ease-in-out 30ms;
-                @include heart;
-            }
-        }
-    }
-
-    &__flex {
-        @include evenly;
-        
-    }
-
-    &__meal {
-        font-size: 1rem;
-        font-weight: 200;
-        @include rel;
-        margin: 1.4rem;
-
-        &::after{
-            content: "";
-            width: 2.7rem;
-            height: 0.18rem;
-            background-color: $color-tertiary;
-            @include abs;
-            bottom: 0;
-            left: 0;
-            top: 1.5rem; 
-        }
-    }
-
-    &__item {
-       display: flex;
-       justify-content: space-between;
-       box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
-       border-radius: 1rem;
-       background-color: $white;
-       margin: 1rem;
-       width: 21.5rem;
-       height: 4.4rem;
-     
-
-       &:hover .check {
-           max-width: 150px;
-
-           &-circle {                          
-               transform: rotate(1turn);
-               transition: transform 400ms ease-in-out;
-           }
-       }
-       
-    }
-
-    &__anim {
-        animation: meal 2s;
-        @include meal;
-    }
-
-}
-.item__dinner {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0.75rem;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-
-    &__tit {
-        font-size: 1.1rem;
-        padding: 0;
-        margin: 0; 
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-    }
-
-    &__sub {
-        font-size: 0.9rem;
-        padding:0;
-        margin: 0;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        width: 100%;
-    }
-
-    &__price {
-        font-weight: 700;
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
-        height: 100%;
-
-        &--price {
-            padding: 0 1rem;
-            
-        }
-        
-    }
-}
-.check {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $color-tertiary;
-    border-radius: 0 1rem 1rem 0;
-    height: 100%;
-    width: 4rem;
-    font-size: 1.25rem;
-    color: $white;
-    overflow: hidden;
-    max-width: 0px;
-    transition: max-width 400ms ease-in-out;
-}
-.menu__item__encas {
+  &__item {
     display: flex;
     justify-content: space-between;
     box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
@@ -167,59 +89,136 @@
     background-color: $white;
     margin: 1rem;
     width: 21.5rem;
-    height: 5.8rem;
-  
-    &:hover .check__encas {
+    height: 4.4rem;
+
+    &:hover .check {
       max-width: 150px;
-  
-      &__circle {                          
-          transform: rotate(1turn);
-          transition: transform 400ms ease-in-out;
+
+      &-circle {
+        transform: rotate(1turn);
+        transition: transform 400ms ease-in-out;
       }
+    }
   }
+
+  &__anim {
+    animation: meal 2s;
+    @include meal;
   }
-  .item__dinner__encas {
-    display: flex;
-    flex-direction: column;
-    padding: 0.75rem;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-  .item__dinner__tit__encas {
+}
+.item__dinner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.75rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  &__tit {
     font-size: 1.1rem;
     padding: 0;
     margin: 0;
-  } 
-  .item__dinner__sub__encas {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &__sub {
     font-size: 0.9rem;
     padding: 0;
-    margin: 0.4rem 0;
-  }
-  .check__encas {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $color-tertiary;
-    border-radius: 0 1rem 1rem 0;
-    height: 100%;
-    width: 4.1rem;
-    color: $white;
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     overflow: hidden;
-    max-width: 0px;
-    transition: max-width 400ms ease-in-out;
   }
 
+  &__price {
+    font-weight: 700;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 100%;
 
+    &--price {
+      margin: 0;
+      padding: 0.8rem 1.5rem;
+    }
+  }
+}
+.check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-tertiary;
+  border-radius: 0 1rem 1rem 0;
+  height: 100%;
+  width: 4rem;
+  font-size: 1.25rem;
+  color: $white;
+  overflow: hidden;
+  max-width: 0;
+  transition: max-width 400ms ease-in-out;
+}
+.menu__item__encas {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  background-color: $white;
+  margin: 1rem;
+  width: 21.5rem;
+  height: 5.8rem;
+
+  &:hover .check__encas {
+    max-width: 150px;
+
+    &__circle {
+      transform: rotate(1turn);
+      transition: transform 400ms ease-in-out;
+    }
+  }
+}
+.item__dinner__encas {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.item__dinner__tit__encas {
+  font-size: 1.1rem;
+  padding: 0;
+  margin: 0;
+}
+.item__dinner__sub__encas {
+  font-size: 0.9rem;
+  padding: 0;
+  margin: 0.4rem 0;
+}
+.check__encas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-tertiary;
+  border-radius: 0 1rem 1rem 0;
+  height: 100%;
+  width: 4.1rem;
+  color: $white;
+  overflow: hidden;
+  max-width: 0px;
+  transition: max-width 400ms ease-in-out;
+}
 
 .command__btn {
-    @include flex;
-    padding: 2rem;
+  @include flex;
+  padding: 2rem;
 }
 .btn__com {
-    @include com;
+  @include com;
 
-    &:hover {
-        @include btn-hov;
-    }
+  &:hover {
+    @include btn-hov;
+  }
 }

@@ -1,183 +1,200 @@
 .local {
-    @include flex;
-    gap: 1rem;
-    background-color: $grey-semi-dark;
-    @include rel;
+  @include flex;
+  gap: 1rem;
+  background-color: $grey-semi-dark;
+  @include rel;
 
-    &__text {
-        font-size: 1.2rem;
-        font-weight: bold;
-    }
+  &__text {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
 }
 .reserve {
-    @include column;
-    background-color: $grey-semi-light;
-    padding: 1rem 1rem 4rem;
-    @include text;
+  @include column;
+  background-color: $grey-semi-light;
+  padding: 1rem 1rem 4rem;
+  @include text;
 
-    &__title {
-        margin: -0.6rem 1rem 2rem;
-        color: $reserve;
-        font-size: 1.12rem;
-    }
+  &__title {
+    margin: -0.6rem 1rem 2rem;
+    color: $reserve;
+    font-size: 1.12rem;
+  }
 }
 .btn {
-    @include btn;
+  @include btn;
 
-    &:hover {
-        @include btn-hov;
-    }
+  &:hover {
+    @include btn-hov;
+  }
 }
 .use {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+
+  &__title {
+    margin: 1rem 1rem 1rem -1rem;
+  }
+
+  &__fun {
+    counter-reset: bulls;
     display: flex;
     flex-wrap: wrap;
-    padding: 2rem;
-    
-    &__title {
-        margin: 1rem 1rem 1rem -1rem; 
+    gap: 1.5rem;
+    padding: 1rem 1rem 1rem 0.3rem;
+  }
+
+  &__funs {
+    width: 20rem;
+    height: 5rem;
+    background-color: $grey-semi-light;
+    border-radius: 1.3rem;
+    box-shadow: $shadow;
+    padding: 1rem 1rem;
+    font-weight: 700;
+    list-style: none;
+    @include rel;
+
+    &:hover .use__funs__fa {
+      cursor: pointer;
+      color: $color-primary;
     }
 
-    &__fun {
-        counter-reset: bulls;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1.5rem;
-        padding: 1rem 1rem 1rem 0.3rem;
+    &:hover {
+      background-color: $pink-light;
+      cursor: pointer;
     }
 
-    &__funs {
-        width: 20rem;
-        height: 5rem;
-        background-color: $grey-semi-light;
-        border-radius: 1.3rem;
-        box-shadow: $shadow;
-        padding: 1rem 1rem;
-        font-weight: 700;
-        list-style: none;
-        @include rel;
-
-        &::before {
-            content: counter(bulls);
-            counter-increment: bulls;
-            @include flex;
-            background-color: $color-primary;
-            border-radius: 1.30rem;
-            color: $white;
-            width: 1.50rem;
-            height: 1.50rem;
-            @include abs;
-            bottom: 1.7rem;
-            left: -0.5rem; 
-            @include text;
-            font-size: 0.75rem;
-        }
-
-        &__fa {
-            color: $grey-dusky;
-            padding: 1rem 1.25rem;
-        }
-        &:hover {
-            background-color: $pink-light;
-            cursor: pointer;
-        }
-
-        &__fa:hover {
-            color: $color-primary;
-            cursor: pointer;
-        }
+    &::before {
+      content: counter(bulls);
+      counter-increment: bulls;
+      @include flex;
+      background-color: $color-primary;
+      border-radius: 1.3rem;
+      color: $white;
+      width: 1.5rem;
+      height: 1.5rem;
+      @include abs;
+      bottom: 1.7rem;
+      left: -0.5rem;
+      @include text;
+      font-size: 0.75rem;
     }
+
+    &__fa {
+      color: $grey-dusky;
+      padding: 1rem 1.25rem;
+    }
+    // &:hover {
+    //   background-color: $pink-light;
+    //   cursor: pointer;
+    // }
+
+    // &__fa:hover {
+    //   color: $color-primary;
+    //   cursor: pointer;
+    // }
+  }
 }
 
 .restaurant {
-    background-color: $grey-semi-light;
-    padding: 3rem 1rem;
-    
-    &__title {
-        margin: 0 0 1rem;
-    }
+  background-color: $grey-semi-light;
+  padding: 3rem 1rem;
 
-    &__card {
-        @include wrap;
-        @include media-min ( 992px) {
-            @include flex;
-        }
+  &__title {
+    margin: 0 0 1rem;
+    @include media-min(992px) {
+      @include flex;
     }
+  }
+
+  &__card {
+    @include wrap;
+    @include media-min(992px) {
+      @include flex;
+    }
+  }
 }
 
 .unline {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 .card {
-    background-color: $white;
-    border-radius: 1rem;
-    box-shadow: $shadow;
-    width: 90vw;
-    height: 16.8rem;
+  background-color: $white;
+  border-radius: 1rem;
+  box-shadow: $shadow;
+  width: 90vw;
+  height: 16.8rem;
+  @include rel;
+  margin: 0.6rem;
+  animation: card 2s ease-in-out 3s;
+  @include card;
+  @include media-min(1200px) {
+    width: 25rem;
+  }
+  @include media-min(962px) {
+    width: 30rem;
+  }
+  &__img {
+    width: 100%;
+    height: 12rem;
+    border-radius: 1rem 1rem 0 0;
+    object-fit: cover;
+  }
+
+  &__new {
+    background-color: $color-tertiary;
+    color: $green-dark;
+    font-weight: bold;
+    padding: 0.5rem;
+    border-radius: 0.12rem;
+    @include abs;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem;
     @include rel;
-    margin: 0.6rem;
-    animation: card 2s ease-in-out 3s;
-    @include card;
-    @include media-min ( 1200px) {
-        width: 25rem;
-    }
-    @include media-min ( 962px) {
-        width: 30rem;
-    }
-    &__img {
-        width: 100%;
-        height: 12rem;
-        border-radius: 1rem 1rem 0 0;
-        object-fit: cover;
-    }
+  }
 
-    &__new {
-        background-color: $color-tertiary;
-        color: $green-dark;
-        font-weight: bold;
-        padding: 0.5rem;
-        border-radius: .12rem;
-        @include abs;
-        right: 1rem;
-        top: 1rem;
+  &__heart {
+    top: 1rem;
+    right: 1.3rem;
+    font-size: 1.6rem;
+    @include abs;
+
+    &--dark {
+      top: 1rem;
+      right: 1.3rem;
+      font-size: 1.6rem;
+      @include abs;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+
+      &:hover {
+        border: none;
+        background-image: linear-gradient(
+          0deg,
+          $color-primary,
+          $color-secondary
+        );
+        animation: heart 2s ease-in-out 30ms;
+        cursor: pointer;
+        opacity: 0.96;
+      }
     }
+  }
 
-    &__title {
-        display: flex;
-        flex-direction: column;
-        padding: 0.8rem; 
-        @include rel;
-    }
-
-    &__heart {
-        top: 1rem;
-        right: 1.3rem;
-        font-size: 1.6rem;
-        @include abs;
-
-        &--dark {
-            top: 1rem;
-            right: 1.3rem;
-            font-size: 1.6rem;
-            @include abs;
-            background-clip: text;
-           -webkit-background-clip: text;
-            color: transparent;
-
-            &:hover {
-                border: none;
-                background-image: linear-gradient(0deg, $color-primary, $color-secondary);
-                animation: heart 2s ease-in-out 30ms;
-                cursor: pointer;
-                opacity: 0.96;
-            }
-        }
-    }
-
-    &__title__title {
-        font-size: 1.1rem;
-        font-weight: 700;
-        margin: 0 0 0.3rem;
-    }
-} 
+  &__title__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 0.3rem;
+  }
+}

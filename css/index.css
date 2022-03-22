@@ -1,3 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .loader {
   display: flex;
   align-items: center;
@@ -53,16 +63,6 @@
   100% {
     transform: rotate(360deg);
   }
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
 .header {
@@ -162,6 +162,14 @@ body {
   list-style: none;
   position: relative;
 }
+.use__funs:hover .use__funs__fa {
+  cursor: pointer;
+  color: #9356DC;
+}
+.use__funs:hover {
+  background-color: #F5EDFF;
+  cursor: pointer;
+}
 .use__funs::before {
   content: counter(bulls);
   counter-increment: bulls;
@@ -183,14 +191,6 @@ body {
   color: #7e7e7e;
   padding: 1rem 1.25rem;
 }
-.use__funs:hover {
-  background-color: #F5EDFF;
-  cursor: pointer;
-}
-.use__funs__fa:hover {
-  color: #9356DC;
-  cursor: pointer;
-}
 
 .restaurant {
   background-color: #f6f6f6;
@@ -198,6 +198,13 @@ body {
 }
 .restaurant__title {
   margin: 0 0 1rem;
+}
+@media screen and (min-width: 992px) {
+  .restaurant__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .restaurant__card {
   display: flex;
@@ -301,9 +308,14 @@ body {
   max-width: 100%;
   max-height: 35rem;
   width: 100%;
-  height: 20rem;
+  height: 17rem;
   object-fit: cover;
   animation: card 2s ease-in-out;
+}
+@media screen and (min-width: 992px) {
+  .franc__img {
+    height: 25rem;
+  }
 }
 
 .menu {
@@ -433,7 +445,6 @@ body {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  width: 100%;
 }
 .item__dinner__price {
   font-weight: 700;
@@ -443,7 +454,8 @@ body {
   height: 100%;
 }
 .item__dinner__price--price {
-  padding: 0 1rem;
+  margin: 0;
+  padding: 0.8rem 1.5rem;
 }
 
 .check {
@@ -457,7 +469,7 @@ body {
   font-size: 1.25rem;
   color: #fff;
   overflow: hidden;
-  max-width: 0px;
+  max-width: 0;
   transition: max-width 400ms ease-in-out;
 }
 
